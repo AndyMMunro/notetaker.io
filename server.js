@@ -1,11 +1,9 @@
 const express = require("express");
-const path = require("path");
-const fs = require("fs");
 const backRoutes = require("./routes/backroutes");
 const frontRoutes = require("./routes/frontroutes");
 
 const app = express();
-const PORT = 3000;
+var PORT = process.env.PORT || 8080;
 
 const tables = [];
 
@@ -14,8 +12,8 @@ app.use(express.urlencoded({
 }));
 
 app.use(express.json());
-app.use('/api', backRoutes)
-app.use('/api', frontRoutes)
+app.use('/api', backRoutes);
+app.use('/', frontRoutes);
 
 
 
