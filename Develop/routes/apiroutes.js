@@ -7,4 +7,8 @@ module.exports = function (app) {
         noteData.push(req.body);
 
     });
+
+    app.get("/api/tables", function (req, res) {
+        res.json(tableData);
+    });
 };
