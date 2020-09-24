@@ -1,6 +1,6 @@
 const express = require("express");
-const backRoutes = require("./routes/backroutes");
-const frontRoutes = require("./routes/frontroutes");
+const backRoutes = require("./routes/apiroutes");
+const frontRoutes = require("./routes/htmlroutes");
 
 const app = express();
 var PORT = process.env.PORT || 8080;
