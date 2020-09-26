@@ -12,14 +12,9 @@ module.exports = function (app) {
             title: req.body.title,
             text: req.body.text
         };
-
-        console.log(tempObj);
-        let data = fs.readFileSync("develop/data/db.json", 'utf8');
-        let data_parsed = JSON.parse(data);
-        // console.log(data_parsed);
-        data_parsed.notes.push(tempObj);
-        fs.writeFileSync("develop/data/db.json", JSON.stringify(data_parse));
-
+        notes.push(tempObj);
+        console.log(notes);
+        res.json(notes);
     });
 
 };
