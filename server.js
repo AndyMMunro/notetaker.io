@@ -1,15 +1,19 @@
 var express = require("express");
 
-const { v4: uuidv4 } = require('uuid');
+const {
+    v4: uuidv4
+} = require('uuid');
 uuidv4();
 
 // var apiRoutes = require("./routes/apiroutes");
 // var htmlRoutes = require("./routes/htmlroutes");
 
 var app = express();
-var PORT = process.env.PORT || 8080;
+var PORT = process.env.PORT || 3001;
 
-app.use(express.urlencoded({ extended: true }));
+app.use(express.urlencoded({
+    extended: true
+}));
 
 app.use(express.json());
 

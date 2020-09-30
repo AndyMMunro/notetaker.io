@@ -1,7 +1,7 @@
 {
   "name": "notes",
   "version": "1.0.1",
-  "description": "",
+  "description": "allowes user to make delete and save notes",
   "main": "server.js",
   "dependencies": {
     "express": "^4.16.3",
@@ -15,6 +15,6 @@
     "start": "node server.js",
     "watch": "nodemon server.js"
   },
-  "author": "",
+  "author": "Andy M",
   "license": "ISC"
 }
