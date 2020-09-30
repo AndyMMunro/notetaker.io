@@ -5,9 +5,6 @@ const {
 } = require('uuid');
 uuidv4();
 
-// var apiRoutes = require("./routes/apiroutes");
-// var htmlRoutes = require("./routes/htmlroutes");
-
 var app = express();
 var PORT = process.env.PORT || 3001;
 
@@ -17,11 +14,7 @@ app.use(express.urlencoded({
 
 app.use(express.json());
 
-// app.use(express.static(__dirname + "/develop/public/assets"));
 app.use(express.static("develop/public"));
-
-
-
 
 require("./develop/routes/apiroutes")(app);
 require("./develop/routes/htmlroutes")(app);
