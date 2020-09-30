@@ -10,7 +10,7 @@ module.exports = function (app) {
     // get notes to be displayed 
 
     app.get("/api/notes", function (req, res) {
-        let notes = fs.readFileSync("develop/data/db.json", "utf-8");
+        let notes = fs.readFileSync("Develop/Data/db.json", "utf-8");
         notes = JSON.parse(notes);
         res.json(notes);
     })
@@ -25,16 +25,16 @@ module.exports = function (app) {
             text: req.body.text
         };
         // console.log(notes);
-        let notes = fs.readFileSync("develop/data/db.json", "utf-8");
+        let notes = fs.readFileSync("Develop/Data/db.json", "utf-8");
         notes = JSON.parse(notes);
         notes.push(tempObj);
-        fs.writeFileSync("develop/data/db.json", JSON.stringify(notes));
+        fs.writeFileSync("Develop/Data/db.json", JSON.stringify(notes));
         res.json(notes);
     });
 
     app.delete('/api/notes/:id', function (req, res) {
         let notesId = req.params.id;
-        let notes = fs.readFileSync("develop/data/db.json", "utf-8");
+        let notes = fs.readFileSync("Develop/Data/db.json", "utf-8");
         notes = JSON.parse(notes)
         for (let i = 0; i < notes.length; i++) {
             if (notes[i].id === notesId) {
@@ -44,7 +44,7 @@ module.exports = function (app) {
             console.log("note deleted");
         };
         fs.writeFile(
-            "develop/data/db.json",
+            "Develop/Data/db.json",
             JSON.stringify(notes),
             "utf8",
             (err) => {
