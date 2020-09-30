@@ -1,6 +1,6 @@
 {
   "name": "notes",
-  "version": "1.0.1",
+  "version": "1.0.0",
   "description": "allowes user to make delete and save notes",
   "main": "server.js",
   "dependencies": {
